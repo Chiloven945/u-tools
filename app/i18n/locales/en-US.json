@@ -25,20 +25,13 @@
     "group": "Group {index}",
     "total": "Total",
     "none": "None",
-    "optional": "Optional"
+    "github": "GitHub"
   },
   "settings": {
     "title": "Settings",
     "description": "Adjust application preferences.",
     "language": "Language",
     "languageDescription": "Only Simplified Chinese and English are included for now, while the structure stays compatible with future locales."
-  },
-  "home": {
-    "eyebrow": "Nuxt UI 4 / Tailwind / i18n",
-    "title": "A clean multi-tool website starter",
-    "description": "This version keeps the original visual direction, settings entry, i18n structure, and open-source license area, while refactoring the product into a tidy tool hub with one tab per tool. The first built-in tool is a random name grouper, with room to add more utilities later.",
-    "toolTabsTitle": "Tool tabs",
-    "toolTabsDescription": "Each tool lives in its own tab so the site can scale cleanly later."
   },
   "tools": {
     "nameGrouping": {
@@ -74,7 +67,6 @@
         "duplicatesRemoved": "Duplicates removed"
       },
       "copySuccess": "The grouping result has been copied to your clipboard."
-    },
-    "comingSoon": "More tools coming soon"
+    }
   }
 }

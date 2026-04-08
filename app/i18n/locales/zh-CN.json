@@ -25,20 +25,13 @@
     "group": "第 {index} 组",
     "total": "总计",
     "none": "暂无",
-    "optional": "可选"
+    "github": "GitHub"
   },
   "settings": {
     "title": "设置",
     "description": "调整应用偏好设置。",
     "language": "语言",
     "languageDescription": "当前仅提供简体中文和英文，但已保留后续继续扩展语言的兼容结构。"
-  },
-  "home": {
-    "eyebrow": "Nuxt UI 4 / Tailwind / i18n",
-    "title": "简洁的多工具网站模板",
-    "description": "保留原项目的主题风格、设置入口、国际化结构与开源许可信息，并改造成一个工具一个选项卡的项目网站。当前已内置“输入名字随机分组”工具，后续可以继续扩展更多小工具。",
-    "toolTabsTitle": "工具列表",
-    "toolTabsDescription": "每个工具独立成一个选项卡，便于后续持续扩展。"
   },
   "tools": {
     "nameGrouping": {
@@ -74,7 +67,6 @@
         "duplicatesRemoved": "已去重"
       },
       "copySuccess": "分组结果已复制到剪贴板。"
-    },
-    "comingSoon": "更多工具即将加入"
+    }
   }
 }

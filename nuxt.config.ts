@@ -24,6 +24,12 @@ export default defineNuxtConfig({
         },
         vueI18n: './app/i18n/i18n.config.ts'
     },
+    components: [
+        {
+            path: '~/components',
+            pathPrefix: false
+        }
+    ],
     app: {
         head: {
             title: 'u-tools',

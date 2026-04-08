@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import {appLocales} from '~/i18n/locales.config'
 
 const props = defineProps<{
@@ -44,22 +44,24 @@ const localeOptions = computed(() =>
             <h2 class="mt-1 text-xl font-semibold text-highlighted">{{ t('settings.title') }}</h2>
             <p class="mt-2 text-sm text-toned">{{ t('settings.description') }}</p>
           </div>
-          <UButton color="neutral" variant="ghost" icon="i-lucide-x" @click="emit('close')"/>
+          <UButton color="neutral" icon="i-lucide-x" variant="ghost" @click="emit('close')"/>
         </div>
 
-        <div class="space-y-4 rounded-2xl border border-default bg-elevated p-4">
+        <div class="space-y-4 rounded-xl border border-default bg-elevated p-4">
           <div>
             <div class="text-sm font-medium text-highlighted">{{ t('settings.language') }}</div>
             <p class="mt-1 text-sm text-toned">{{ t('settings.languageDescription') }}</p>
           </div>
 
-          <USelect
-              v-model="selectedLocale"
-              :items="localeOptions"
-              value-key="value"
-              class="w-full"
-              size="lg"
-          />
+          <div>
+            <USelect
+                v-model="selectedLocale"
+                :items="localeOptions"
+                class="w-full"
+                size="lg"
+                value-key="value"
+            />
+          </div>
         </div>
 
         <div class="mt-5 flex justify-end">

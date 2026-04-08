@@ -1,0 +1,80 @@
+{
+  "brand": {
+    "name": "u-tools",
+    "subtitle": "多工具项目网站"
+  },
+  "nav": {
+    "tools": "工具",
+    "settings": "设置"
+  },
+  "license": {
+    "title": "版权与许可",
+    "description": "u-tools 是开源软件。本项目以 GNU Affero 通用公共许可协议第三版（AGPL-3.0）分发。"
+  },
+  "common": {
+    "close": "关闭",
+    "cancel": "取消",
+    "copy": "复制",
+    "copied": "已复制",
+    "reset": "重置",
+    "generate": "分组",
+    "regenerate": "重新随机",
+    "result": "结果",
+    "preview": "预览",
+    "count": "数量",
+    "group": "第 {index} 组",
+    "total": "总计",
+    "none": "暂无",
+    "optional": "可选"
+  },
+  "settings": {
+    "title": "设置",
+    "description": "调整应用偏好设置。",
+    "language": "语言",
+    "languageDescription": "当前仅提供简体中文和英文，但已保留后续继续扩展语言的兼容结构。"
+  },
+  "home": {
+    "eyebrow": "Nuxt UI 4 / Tailwind / i18n",
+    "title": "简洁的多工具网站模板",
+    "description": "保留原项目的主题风格、设置入口、国际化结构与开源许可信息，并改造成一个工具一个选项卡的项目网站。当前已内置“输入名字随机分组”工具，后续可以继续扩展更多小工具。",
+    "toolTabsTitle": "工具列表",
+    "toolTabsDescription": "每个工具独立成一个选项卡，便于后续持续扩展。"
+  },
+  "tools": {
+    "nameGrouping": {
+      "tab": "随机分组",
+      "title": "名字随机分小组",
+      "description": "输入名字并设置小组数量，生成随机且尽量均衡的分组结果。",
+      "inputTitle": "输入名单",
+      "inputDescription": "每行一个名字。空行会自动忽略。",
+      "resultTitle": "分组结果",
+      "resultDescription": "点击“分组”后，结果会显示在这里。",
+      "namesLabel": "名字列表",
+      "namesPlaceholder": "例如：\n张三\n李四\n王五\n赵六",
+      "groupCountLabel": "小组数量",
+      "groupCountHint": "会按人数尽量均匀地分配到各组。",
+      "seedLabel": "随机种子",
+      "seedHint": "不填写时每次都会重新随机；填写后可复现同一结果。",
+      "dedupeLabel": "自动去重",
+      "dedupeHint": "保留首次出现的名字，移除重复项。",
+      "summaryNames": "参与分组人数",
+      "summaryGroups": "生成小组数",
+      "summaryLargest": "最大组人数",
+      "summarySmallest": "最小组人数",
+      "emptyTitle": "还没有分组结果",
+      "emptyDescription": "在左侧输入名单并点击“分组”，右侧就会显示随机结果。",
+      "validation": {
+        "emptyNames": "请至少输入一个名字。",
+        "invalidGroupCount": "请输入有效的小组数量。",
+        "tooManyGroups": "小组数量不能大于名字数量。"
+      },
+      "stats": {
+        "rawCount": "原始名单",
+        "usableCount": "可用人数",
+        "duplicatesRemoved": "已去重"
+      },
+      "copySuccess": "分组结果已复制到剪贴板。"
+    },
+    "comingSoon": "更多工具即将加入"
+  }
+}

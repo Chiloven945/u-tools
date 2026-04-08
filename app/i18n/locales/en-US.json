@@ -1,0 +1,80 @@
+{
+  "brand": {
+    "name": "u-tools",
+    "subtitle": "Multi-tool project website"
+  },
+  "nav": {
+    "tools": "Tools",
+    "settings": "Settings"
+  },
+  "license": {
+    "title": "Copyright & License",
+    "description": "u-tools is open-source software distributed under the GNU Affero General Public License v3.0 (AGPL-3.0)."
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "copy": "Copy",
+    "copied": "Copied",
+    "reset": "Reset",
+    "generate": "Generate",
+    "regenerate": "Randomize again",
+    "result": "Result",
+    "preview": "Preview",
+    "count": "Count",
+    "group": "Group {index}",
+    "total": "Total",
+    "none": "None",
+    "optional": "Optional"
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Adjust application preferences.",
+    "language": "Language",
+    "languageDescription": "Only Simplified Chinese and English are included for now, while the structure stays compatible with future locales."
+  },
+  "home": {
+    "eyebrow": "Nuxt UI 4 / Tailwind / i18n",
+    "title": "A clean multi-tool website starter",
+    "description": "This version keeps the original visual direction, settings entry, i18n structure, and open-source license area, while refactoring the product into a tidy tool hub with one tab per tool. The first built-in tool is a random name grouper, with room to add more utilities later.",
+    "toolTabsTitle": "Tool tabs",
+    "toolTabsDescription": "Each tool lives in its own tab so the site can scale cleanly later."
+  },
+  "tools": {
+    "nameGrouping": {
+      "tab": "Random grouping",
+      "title": "Randomly split names into groups",
+      "description": "Paste names, choose the number of groups, and generate balanced random groups.",
+      "inputTitle": "Name input",
+      "inputDescription": "Enter one name per line. Empty lines are ignored automatically.",
+      "resultTitle": "Grouping result",
+      "resultDescription": "Click “Generate” and the grouped result will appear here.",
+      "namesLabel": "Name list",
+      "namesPlaceholder": "For example:\nAlice\nBob\nCindy\nDavid",
+      "groupCountLabel": "Number of groups",
+      "groupCountHint": "Names are distributed as evenly as possible.",
+      "seedLabel": "Random seed",
+      "seedHint": "Leave empty to reshuffle every time, or fill in a seed to reproduce the same result.",
+      "dedupeLabel": "Remove duplicates",
+      "dedupeHint": "Keep the first occurrence of a name and remove later duplicates.",
+      "summaryNames": "People included",
+      "summaryGroups": "Groups created",
+      "summaryLargest": "Largest group",
+      "summarySmallest": "Smallest group",
+      "emptyTitle": "No grouping result yet",
+      "emptyDescription": "Enter names on the left and click “Generate” to see the randomized groups here.",
+      "validation": {
+        "emptyNames": "Please enter at least one name.",
+        "invalidGroupCount": "Please enter a valid group count.",
+        "tooManyGroups": "The number of groups cannot exceed the number of names."
+      },
+      "stats": {
+        "rawCount": "Raw entries",
+        "usableCount": "Usable names",
+        "duplicatesRemoved": "Duplicates removed"
+      },
+      "copySuccess": "The grouping result has been copied to your clipboard."
+    },
+    "comingSoon": "More tools coming soon"
+  }
+}

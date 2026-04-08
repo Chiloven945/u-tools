@@ -26,3 +26,16 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## Contributing
+
+Contributions are welcome. Fork the repository, create a feature branch, and keep changes focused and easy to review.  
+When opening a Pull Request, explain what changed, why it changed, and how to test it.
+
+You also need to follow certain commit and Pull Request rules. We use
+the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) for commits and Pull Requests naming.
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). See the [LICENSE](LICENSE) file
+for details.

@@ -2,7 +2,7 @@
 const {t} = useI18n()
 const route = useRoute()
 const settingsOpen = ref(false)
-const githubUrl = 'https://github.com/your-org/u-tools'
+const githubUrl = 'https://github.com/Chiloven945/u-tools'
 
 const {tools, normalizeToolId} = useToolRegistry()
 

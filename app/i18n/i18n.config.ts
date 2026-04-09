@@ -30,7 +30,6 @@ export default defineI18nConfig(() => ({
     missingWarn: false,
     fallbackWarn: false,
     datetimeFormats: {
-        'zh-CN': commonDateTimeFormats,
         'en-US': {
             datetimeShort: {
                 year: 'numeric',
@@ -43,10 +42,13 @@ export default defineI18nConfig(() => ({
                 hour: 'numeric',
                 minute: '2-digit'
             }
-        }
+        },
+        'zh-CN': commonDateTimeFormats,
+        'zh-TW': commonDateTimeFormats,
     },
     numberFormats: {
+        'en-US': commonNumberFormats,
         'zh-CN': commonNumberFormats,
-        'en-US': commonNumberFormats
+        'zh-TW': commonNumberFormats,
     }
 }))

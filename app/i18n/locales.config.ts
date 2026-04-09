@@ -17,5 +17,11 @@ export const appLocales: AppLocaleDefinition[] = [
         language: 'zh-CN',
         file: 'zh-CN.json',
         name: '简体中文（中国大陆）'
+    },
+    {
+        code: 'zh-TW',
+        language: 'zh-TW',
+        file: 'zh-TW.json',
+        name: '繁體中文（台灣）'
     }
 ]

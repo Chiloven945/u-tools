@@ -1,0 +1,72 @@
+{
+  "brand": {
+    "name": "u-tools",
+    "subtitle": "多工具項目網站"
+  },
+  "nav": {
+    "tools": "工具",
+    "settings": "設定"
+  },
+  "license": {
+    "title": "版權與許可",
+    "description": "u-tools 是開源軟體。本項目以 GNU Affero 通用公共許可協議第三版（AGPL-3.0）分發。"
+  },
+  "common": {
+    "close": "關閉",
+    "cancel": "取消",
+    "copy": "複製",
+    "copied": "已複製",
+    "reset": "重設",
+    "generate": "分組",
+    "regenerate": "重新隨機",
+    "result": "結果",
+    "preview": "預覽",
+    "count": "數量",
+    "group": "第 {index} 組",
+    "total": "總計",
+    "none": "暫無",
+    "github": "GitHub"
+  },
+  "settings": {
+    "title": "設定",
+    "description": "調整應用偏好設定。",
+    "language": "語言",
+    "languageDescription": "在此處選擇應用的顯示語言。"
+  },
+  "tools": {
+    "nameGrouping": {
+      "tab": "隨機分組",
+      "title": "名字隨機分小組",
+      "description": "輸入名字並設定小組數量，生成隨機且盡量均衡的分組結果。",
+      "inputTitle": "輸入名單",
+      "inputDescription": "每行一個名字。空行會自動忽略。",
+      "resultTitle": "分組結果",
+      "resultDescription": "點擊「分組」後，結果會顯示在這裡。",
+      "namesLabel": "名字列表",
+      "namesPlaceholder": "例如：\n張三\n李四\n王五\n趙六",
+      "groupCountLabel": "小組數量",
+      "groupCountHint": "會按人數盡量均勻地分配到各組。",
+      "seedLabel": "隨機種子",
+      "seedHint": "不填寫時每次都會重新隨機；填寫後可復現同一結果。",
+      "dedupeLabel": "自動去重",
+      "dedupeHint": "保留首次出現的名字，移除重複項。",
+      "summaryNames": "參與分組人數",
+      "summaryGroups": "生成小組數",
+      "summaryLargest": "最大組人數",
+      "summarySmallest": "最小組人數",
+      "emptyTitle": "還沒有分組結果",
+      "emptyDescription": "在左側輸入名單並點擊「分組」，右側就會顯示隨機結果。",
+      "validation": {
+        "emptyNames": "請至少輸入一個名字。",
+        "invalidGroupCount": "請輸入有效的小組數量。",
+        "tooManyGroups": "小組數量不能大於名字數量。"
+      },
+      "stats": {
+        "rawCount": "原始名單",
+        "usableCount": "可用人數",
+        "duplicatesRemoved": "已去重"
+      },
+      "copySuccess": "分組結果已複製到剪貼簿。"
+    }
+  }
+}

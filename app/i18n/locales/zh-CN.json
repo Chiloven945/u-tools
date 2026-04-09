@@ -31,7 +31,7 @@
     "title": "设置",
     "description": "调整应用偏好设置。",
     "language": "语言",
-    "languageDescription": "当前仅提供简体中文和英文，但已保留后续继续扩展语言的兼容结构。"
+    "languageDescription": "在此处选择应用的显示语言。"
   },
   "tools": {
     "nameGrouping": {

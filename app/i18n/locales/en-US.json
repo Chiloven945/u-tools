@@ -31,7 +31,7 @@
     "title": "Settings",
     "description": "Adjust application preferences.",
     "language": "Language",
-    "languageDescription": "Only Simplified Chinese and English are included for now, while the structure stays compatible with future locales."
+    "languageDescription": "Select the display language for the application here."
   },
   "tools": {
     "nameGrouping": {

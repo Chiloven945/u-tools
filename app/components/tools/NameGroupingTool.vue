@@ -5,13 +5,12 @@ import {createGroups, type GroupingResult} from '~/composables/useNameGrouping'
 
 const {t} = useI18n()
 const {copy, copied} = useClipboard()
+const toast = useToast()
 
 const namesInput = ref('')
 const groupCountInput = ref('2')
 const seedInput = ref('')
 const dedupe = ref(true)
-const errorMessage = ref('')
-const successMessage = ref('')
 const result = ref<GroupingResult | null>(null)
 
 function resolveValidationMessage(error: unknown) {
@@ -32,10 +31,15 @@ function resolveValidationMessage(error: unknown) {
   return t('tools.nameGrouping.validation.invalidGroupCount')
 }
 
-function generateGroups() {
-  errorMessage.value = ''
-  successMessage.value = ''
+function showToast(options: { title: string, color?: 'success' | 'error' | 'warning' | 'info', icon?: string }) {
+  toast.add({
+    title: options.title,
+    color: options.color ?? 'info',
+    icon: options.icon
+  })
+}
 
+function generateGroups() {
   const nextGroupCount = Number.parseInt(groupCountInput.value, 10)
 
   try {
@@ -43,9 +47,19 @@ function generateGroups() {
       dedupe: dedupe.value,
       seed: seedInput.value
     })
+
+    showToast({
+      title: t('tools.nameGrouping.generateSuccess', {count: result.value.groups.length}),
+      color: 'success',
+      icon: 'i-lucide-circle-check-big'
+    })
   } catch (error) {
     result.value = null
-    errorMessage.value = resolveValidationMessage(error)
+    showToast({
+      title: resolveValidationMessage(error),
+      color: 'error',
+      icon: 'i-lucide-circle-alert'
+    })
   }
 }
 
@@ -54,9 +68,13 @@ function resetAll() {
   groupCountInput.value = '2'
   seedInput.value = ''
   dedupe.value = true
-  errorMessage.value = ''
-  successMessage.value = ''
   result.value = null
+
+  showToast({
+    title: t('tools.nameGrouping.resetSuccess'),
+    color: 'success',
+    icon: 'i-lucide-rotate-ccw'
+  })
 }
 
 const copyText = computed(() => {
@@ -68,9 +86,21 @@ const copyText = computed(() => {
 })
 
 async function copyResult() {
-  if (!copyText.value) return
+  if (!copyText.value) {
+    showToast({
+      title: t('tools.nameGrouping.validation.noResults'),
+      color: 'warning',
+      icon: 'i-lucide-copy-x'
+    })
+    return
+  }
+
   await copy(copyText.value)
-  successMessage.value = t('tools.nameGrouping.copySuccess')
+  showToast({
+    title: t('tools.nameGrouping.copySuccess'),
+    color: 'success',
+    icon: 'i-lucide-copy-check'
+  })
 }
 </script>
 
@@ -106,9 +136,6 @@ async function copyResult() {
           <UCheckbox v-model="dedupe" :label="t('tools.nameGrouping.dedupeLabel')"/>
           <p class="mt-2 text-sm text-toned">{{ t('tools.nameGrouping.dedupeHint') }}</p>
         </div>
-
-        <UAlert v-if="errorMessage" :title="errorMessage" color="error" variant="subtle"/>
-        <UAlert v-if="successMessage" :title="successMessage" color="success" variant="subtle"/>
 
         <div class="flex flex-wrap gap-3">
           <UButton color="primary" icon="i-lucide-sparkles" @click="generateGroups">

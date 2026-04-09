@@ -17,8 +17,8 @@
     "copy": "复制",
     "copied": "已复制",
     "reset": "重置",
-    "generate": "分组",
-    "regenerate": "重新随机",
+    "generate": "生成",
+    "regenerate": "重新生成",
     "result": "结果",
     "preview": "预览",
     "count": "数量",
@@ -59,14 +59,48 @@
       "validation": {
         "emptyNames": "请至少输入一个名字。",
         "invalidGroupCount": "请输入有效的小组数量。",
-        "tooManyGroups": "小组数量不能大于名字数量。"
+        "tooManyGroups": "小组数量不能大于名字数量。",
+        "noResults": "当前还没有可复制的分组结果。"
       },
       "stats": {
         "rawCount": "原始名单",
         "usableCount": "可用人数",
         "duplicatesRemoved": "已去重"
       },
-      "copySuccess": "分组结果已复制到剪贴板。"
+      "copySuccess": "分组结果已复制到剪贴板。",
+      "generateSuccess": "随机分组已生成，共 {count} 组。",
+      "resetSuccess": "随机分组工具已重置。"
+    },
+    "randomInsert": {
+      "tab": "随机插入符号",
+      "title": "在每个非空白字符前随机插入符号",
+      "description": "把符号尽量均衡地随机插入到文本中每个非空白字符前，可一次生成多条结果。",
+      "inputTitle": "输入内容",
+      "inputDescription": "填写待处理文本，并按每行一个填写要插入的符号。",
+      "resultTitle": "生成结果",
+      "resultDescription": "点击“生成”后，处理后的结果会显示在这里。",
+      "sourceLabel": "A：待处理文本",
+      "sourcePlaceholder": "例如：\n你好世界\n这是一段测试文本",
+      "symbolsLabel": "B：插入符号（每行一个）",
+      "symbolsPlaceholder": "例如：\n★\n#",
+      "countLabel": "生成数量",
+      "countHint": "可一次生成多条随机结果。",
+      "seedLabel": "随机种子",
+      "seedHint": "不填写时每次都会重新随机；填写后可复现相同结果顺序。",
+      "outputItemTitle": "结果 {index}",
+      "emptyTitle": "还没有生成结果",
+      "emptyDescription": "在左侧输入文本和符号后，点击“生成”即可查看结果。",
+      "validation": {
+        "emptySource": "请输入 A：待处理文本。",
+        "emptySymbols": "请输入 B：插入符号（每行一个）。",
+        "invalidCount": "请输入 1 到 10000 之间的有效生成数量。",
+        "noCharacters": "A 中没有可处理的非空白字符。",
+        "noResults": "当前还没有可复制的生成结果。"
+      },
+      "copySuccess": "所有结果已复制到剪贴板。",
+      "copySingleSuccess": "当前结果已复制到剪贴板。",
+      "generateSuccess": "已生成 {count} 条插入结果。",
+      "resetSuccess": "随机插入工具已重置。"
     }
   }
 }

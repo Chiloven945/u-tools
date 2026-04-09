@@ -19,6 +19,12 @@ export function useToolRegistry() {
             label: t('tools.nameGrouping.tab'),
             description: t('tools.nameGrouping.description'),
             icon: 'i-lucide-users-round'
+        },
+        {
+            id: 'random-insert',
+            label: t('tools.randomInsert.tab'),
+            description: t('tools.randomInsert.description'),
+            icon: 'i-lucide-wand-sparkles'
         }
     ])
 

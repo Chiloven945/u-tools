@@ -17,8 +17,8 @@
     "copy": "複製",
     "copied": "已複製",
     "reset": "重設",
-    "generate": "分組",
-    "regenerate": "重新隨機",
+    "generate": "生成",
+    "regenerate": "重新生成",
     "result": "結果",
     "preview": "預覽",
     "count": "數量",
@@ -59,14 +59,48 @@
       "validation": {
         "emptyNames": "請至少輸入一個名字。",
         "invalidGroupCount": "請輸入有效的小組數量。",
-        "tooManyGroups": "小組數量不能大於名字數量。"
+        "tooManyGroups": "小組數量不能大於名字數量。",
+        "noResults": "目前還沒有可複製的分組結果。"
       },
       "stats": {
         "rawCount": "原始名單",
         "usableCount": "可用人數",
         "duplicatesRemoved": "已去重"
       },
-      "copySuccess": "分組結果已複製到剪貼簿。"
+      "copySuccess": "分組結果已複製到剪貼簿。",
+      "generateSuccess": "隨機分組已生成，共 {count} 組。",
+      "resetSuccess": "隨機分組工具已重置。"
+    },
+    "randomInsert": {
+      "tab": "隨機插入符號",
+      "title": "在每個非空白字元前隨機插入符號",
+      "description": "把符號盡量均衡地隨機插入到文字中每個非空白字元前，可一次生成多筆結果。",
+      "inputTitle": "輸入內容",
+      "inputDescription": "填寫待處理文字，並按每行一個填寫要插入的符號。",
+      "resultTitle": "生成結果",
+      "resultDescription": "點擊「生成」後，處理後的結果會顯示在這裡。",
+      "sourceLabel": "A：待處理文字",
+      "sourcePlaceholder": "例如：\n你好世界\n這是一段測試文字",
+      "symbolsLabel": "B：插入符號（每行一個）",
+      "symbolsPlaceholder": "例如：\n★\n#",
+      "countLabel": "生成數量",
+      "countHint": "可一次生成多筆隨機結果。",
+      "seedLabel": "隨機種子",
+      "seedHint": "不填寫時每次都會重新隨機；填寫後可復現相同結果順序。",
+      "outputItemTitle": "結果 {index}",
+      "emptyTitle": "還沒有生成結果",
+      "emptyDescription": "在左側輸入文字和符號後，點擊「生成」即可查看結果。",
+      "validation": {
+        "emptySource": "請輸入 A：待處理文字。",
+        "emptySymbols": "請輸入 B：插入符號（每行一個）。",
+        "invalidCount": "請輸入 1 到 10000 之間的有效生成數量。",
+        "noCharacters": "A 中沒有可處理的非空白字元。",
+        "noResults": "目前還沒有可複製的生成結果。"
+      },
+      "copySuccess": "所有結果已複製到剪貼簿。",
+      "copySingleSuccess": "目前結果已複製到剪貼簿。",
+      "generateSuccess": "已生成 {count} 條插入結果。",
+      "resetSuccess": "隨機插入工具已重置。"
     }
   }
 }

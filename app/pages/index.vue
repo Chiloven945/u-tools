@@ -19,5 +19,6 @@ const activeTool = computed(
     </div>
 
     <NameGroupingTool v-if="activeToolId === 'name-grouping'"/>
+    <RandomInsertTool v-else-if="activeToolId === 'random-insert'"/>
   </div>
 </template>

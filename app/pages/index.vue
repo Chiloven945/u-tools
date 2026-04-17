@@ -1,18 +1,16 @@
 <script lang="ts" setup>
-const route = useRoute()
-const {tools, normalizeToolId} = useToolRegistry()
+const {tools} = useToolRegistry()
+const defaultToolId = computed(() => tools.value[0]?.id || 'name-grouping')
 
-const activeToolId = computed(() => normalizeToolId(route.query.tool))
+if (import.meta.server) {
+  await navigateTo(`/${defaultToolId.value}`, {redirectCode: 302, replace: true})
+}
 
-const activeTool = computed(
-    () => tools.value.find((tool) => tool.id === activeToolId.value) || tools.value[0]
-)
+if (import.meta.client) {
+  navigateTo(`/${defaultToolId.value}`, {replace: true})
+}
 </script>
 
 <template>
-  <div>
-    <NameGroupingTool v-if="activeToolId === 'name-grouping'"/>
-    <RandomInsertTool v-else-if="activeToolId === 'random-insert'"/>
-    <NameGroupingTool v-else-if="activeTool?.id === 'name-grouping'"/>
-  </div>
+  <div/>
 </template>

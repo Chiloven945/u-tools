@@ -11,7 +11,7 @@ const githubUrl = 'https://github.com/Chiloven945/u-tools'
 
 const {tools, normalizeToolId} = useToolRegistry()
 
-const activeToolId = computed(() => normalizeToolId(route.query.tool))
+const activeToolId = computed(() => normalizeToolId(route.params.tool))
 const activeTool = computed(
     () => tools.value.find((tool) => tool.id === activeToolId.value) || tools.value[0]
 )
@@ -21,12 +21,7 @@ const toolNavigationItems = computed<NavigationMenuItem[]>(() =>
       label: tool.label,
       icon: tool.icon,
       active: activeToolId.value === tool.id,
-      to: {
-        path: '/',
-        query: {
-          tool: tool.id
-        }
-      }
+      to: `/${tool.id}`
     }))
 )
 

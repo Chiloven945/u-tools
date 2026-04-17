@@ -10,15 +10,9 @@ const activeTool = computed(
 </script>
 
 <template>
-  <div class="space-y-6">
-    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-      <div>
-        <p class="text-sm text-primary">{{ activeTool.description }}</p>
-        <h1 class="mt-2 text-3xl font-semibold text-highlighted lg:text-4xl">{{ activeTool.label }}</h1>
-      </div>
-    </div>
-
+  <div>
     <NameGroupingTool v-if="activeToolId === 'name-grouping'"/>
     <RandomInsertTool v-else-if="activeToolId === 'random-insert'"/>
+    <NameGroupingTool v-else-if="activeTool?.id === 'name-grouping'"/>
   </div>
 </template>

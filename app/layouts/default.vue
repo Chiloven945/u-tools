@@ -1,16 +1,26 @@
 <script lang="ts" setup>
+import type {NavigationMenuItem} from '@nuxt/ui'
+
 const {t} = useI18n()
 const route = useRoute()
+
+const open = ref(true)
 const settingsOpen = ref(false)
+const licenseOpen = ref(false)
 const githubUrl = 'https://github.com/Chiloven945/u-tools'
 
 const {tools, normalizeToolId} = useToolRegistry()
 
 const activeToolId = computed(() => normalizeToolId(route.query.tool))
+const activeTool = computed(
+    () => tools.value.find((tool) => tool.id === activeToolId.value) || tools.value[0]
+)
 
-const navigation = computed(() =>
+const toolNavigationItems = computed<NavigationMenuItem[]>(() =>
     tools.value.map((tool) => ({
-      ...tool,
+      label: tool.label,
+      icon: tool.icon,
+      active: activeToolId.value === tool.id,
       to: {
         path: '/',
         query: {
@@ -20,76 +30,118 @@ const navigation = computed(() =>
     }))
 )
 
-function isActive(toolId: string) {
-  return activeToolId.value === toolId
-}
+const settingsNavigationItems = computed<NavigationMenuItem[]>(() => [
+  {
+    label: t('nav.settings'),
+    icon: 'i-lucide-settings-2',
+    active: settingsOpen.value,
+    onSelect(event?: Event) {
+      event?.preventDefault?.()
+      settingsOpen.value = true
+    }
+  }
+])
+
+const sidebarNavigationUi = {
+  root: 'w-full',
+  list: 'w-full gap-1',
+  link: 'p-1.5 overflow-hidden',
+  linkLabel: 'truncate'
+} as const
 </script>
 
 <template>
-  <div class="min-h-screen">
-    <div class="mx-auto grid min-h-screen max-w-425 lg:grid-cols-[260px_1fr]">
-      <aside class="border-b border-default bg-default/70 backdrop-blur lg:border-b-0 lg:border-r">
-        <div class="sticky top-0 flex min-h-screen flex-col p-4 lg:p-6">
-          <div>
-            <div class="mb-6 flex items-center gap-3">
-              <div
-                  class="flex size-11 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/20">
-                <UIcon class="size-5" name="i-lucide-boxes"/>
-              </div>
-              <div>
-                <p class="text-sm text-muted">{{ t('brand.subtitle') }}</p>
-                <h1 class="text-lg font-semibold text-highlighted">{{ t('brand.name') }}</h1>
-              </div>
-            </div>
-
-            <nav class="space-y-2">
-              <NuxtLink
-                  v-for="item in navigation"
-                  :key="item.id"
-                  :class="isActive(item.id) ? 'bg-elevated text-highlighted ring-1 ring-default' : ''"
-                  :to="item.to"
-                  class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-toned transition hover:bg-elevated hover:text-highlighted"
-              >
-                <UIcon :name="item.icon" class="size-4"/>
-                <span>{{ item.label }}</span>
-              </NuxtLink>
-
-              <button
-                  class="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-toned transition hover:bg-elevated hover:text-highlighted"
-                  type="button"
-                  @click="settingsOpen = true"
-              >
-                <UIcon class="size-4" name="i-lucide-settings-2"/>
-                <span>{{ t('nav.settings') }}</span>
-              </button>
-            </nav>
+  <div class="flex min-h-screen flex-1 bg-neutral-950">
+    <USidebar
+        v-model:open="open"
+        :ui="{
+          container: 'h-full'
+        }"
+        collapsible="icon"
+        side="left"
+        variant="inset"
+    >
+      <template #header>
+        <div
+            :class="open ? '' : 'justify-center'"
+            class="flex min-w-0 items-center gap-3"
+        >
+          <div
+              class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/20"
+          >
+            <UIcon class="size-6" name="i-lucide-boxes"/>
           </div>
 
-          <div class="mt-auto pt-6">
-            <div class="rounded-2xl border border-default bg-elevated/70 p-4">
-              <p class="text-sm font-medium text-highlighted">{{ t('license.title') }}</p>
-              <p class="mt-2 text-sm text-muted">AGPL-3.0</p>
-              <p class="mt-2 text-xs leading-5 text-muted">
-                {{ t('license.description') }}
-              </p>
-
-              <div class="mt-4 flex justify-start">
-                <UButton
-                    :label="t('common.github')"
-                    :to="githubUrl"
-                    color="neutral"
-                    icon="i-lucide-github"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    variant="ghost"
-                />
-              </div>
-            </div>
+          <div v-if="open" class="min-w-0">
+            <p class="truncate text-xs text-muted">{{ t('brand.subtitle') }}</p>
+            <p class="truncate text-lg font-semibold text-highlighted">{{ t('brand.name') }}</p>
           </div>
         </div>
-      </aside>
+      </template>
 
-      <main class="min-w-0">
+      <div class="flex h-full flex-col">
+        <UNavigationMenu
+            :items="toolNavigationItems"
+            :ui="sidebarNavigationUi"
+            class="w-full"
+            orientation="vertical"
+        />
+
+        <div class="mt-auto border-t border-default pt-4">
+          <UNavigationMenu
+              :items="settingsNavigationItems"
+              :ui="sidebarNavigationUi"
+              class="w-full"
+              orientation="vertical"
+          />
+        </div>
+      </div>
+    </USidebar>
+
+    <div
+        class="flex flex-1 flex-col overflow-hidden bg-default lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:not-peer-data-[collapsible=offcanvas]:ms-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-default"
+    >
+      <header
+          class="flex h-(--ui-header-height) shrink-0 items-center justify-between gap-4 border-b border-default px-4">
+        <div class="flex min-w-0 items-center gap-3">
+          <UButton
+              aria-label="Toggle sidebar"
+              color="neutral"
+              icon="i-lucide-panel-left"
+              variant="ghost"
+              @click="open = !open"
+          />
+
+          <div class="min-w-0">
+            <p class="truncate text-xs text-primary">{{ activeTool.description }}</p>
+            <h1 class="truncate text-lg font-semibold text-highlighted sm:text-xl">{{ activeTool.label }}</h1>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <UButton
+              aria-label="AGPL-3.0"
+              color="neutral"
+              icon="i-lucide-scroll-text"
+              square
+              variant="ghost"
+              @click="licenseOpen = true"
+          />
+
+          <UButton
+              :to="githubUrl"
+              aria-label="GitHub"
+              color="neutral"
+              icon="i-lucide-github"
+              rel="noopener noreferrer"
+              square
+              target="_blank"
+              variant="ghost"
+          />
+        </div>
+      </header>
+
+      <main class="min-h-0 min-w-0 flex-1 overflow-auto">
         <div class="p-4 lg:p-8">
           <slot/>
         </div>
@@ -97,5 +149,6 @@ function isActive(toolId: string) {
     </div>
 
     <SettingsDialog :open="settingsOpen" @close="settingsOpen = false"/>
+    <LicenseDialog :github-url="githubUrl" :open="licenseOpen" @close="licenseOpen = false"/>
   </div>
 </template>

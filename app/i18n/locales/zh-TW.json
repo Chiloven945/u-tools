@@ -25,7 +25,9 @@
     "group": "第 {index} 組",
     "total": "總計",
     "none": "暫無",
-    "github": "GitHub"
+    "github": "GitHub",
+    "undo": "撤銷",
+    "redo": "重做"
   },
   "settings": {
     "title": "設定",
@@ -101,6 +103,79 @@
       "copySingleSuccess": "目前結果已複製到剪貼簿。",
       "generateSuccess": "已生成 {count} 條插入結果。",
       "resetSuccess": "隨機插入工具已重置。"
+    },
+    "articleFormat": {
+      "tab": "文章排版",
+      "title": "文章排版工具箱",
+      "description": "在同一個編輯區內完成段首縮排、段間空行、一鍵清除格式，以及中英文之間自動空格。",
+      "editorTitle": "統一編輯區",
+      "editorDescription": "把文章貼到這裡，所有操作都會直接作用在這個唯一輸入框裡。",
+      "editorPlaceholder": "把文章貼到這裡，然後使用右側工作台調整段首符號、段間空行、清除格式和中英文間距。",
+      "workbenchTitle": "排版工作台",
+      "workbenchDescription": "使用更直接的按鈕與開關完成排版，不再堆滿下拉選單。",
+      "panels": {
+        "indent": "段首符號",
+        "blankLines": "段間空行",
+        "cleanup": "清除格式",
+        "spacing": "中英文空格"
+      },
+      "actions": {
+        "undo": "撤銷",
+        "redo": "重做"
+      },
+      "stats": {
+        "characters": "字數",
+        "lines": "行數",
+        "paragraphs": "自然段"
+      },
+      "indent": {
+        "symbolTitle": "段首插入符號",
+        "countLabel": "每段插入數量",
+        "customLabel": "自訂符號",
+        "customPlaceholder": "例如：→ 或 ※",
+        "apply": "在段首插入",
+        "presets": {
+          "fullWidthSpace": "全形空格",
+          "tab": "Tab",
+          "doubleSpace": "兩個空格",
+          "custom": "自訂"
+        }
+      },
+      "blankLines": {
+        "countLabel": "插入空行數量",
+        "countHint": "會在每個自然段之間插入指定數量的空行。",
+        "treatEmptyLineAsParagraph": "將既有空行當作自然段處理",
+        "treatEmptyLineHint": "開啟後，每一條實體行都會參與插入空行；關閉後，只把非空行當作自然段。",
+        "apply": "插入段間空行"
+      },
+      "cleanup": {
+        "removeLeadingIndent": "清除每段開頭的縮排符號",
+        "removeBlankLines": "刪除所有空行",
+        "trimLineEndSpaces": "清理每行末尾空白",
+        "removePanguSpacing": "移除中英文之間的空格",
+        "apply": "一鍵清除所選格式"
+      },
+      "spacing": {
+        "title": "為中文英文之間加入空格",
+        "description": "在不新增第二個輸出框的前提下，直接把目前文字處理成 pangu 風格的中英文排版。",
+        "apply": "加入中英文空格"
+      },
+      "validation": {
+        "emptyIndentToken": "請先輸入自訂段首符號。",
+        "noCleanupOption": "請至少勾選一項要清除的格式。",
+        "emptyText": "目前還沒有可複製的文字。",
+        "cannotUndo": "目前會話中已經沒有可撤銷的內容了。",
+        "cannotRedo": "目前會話中已經沒有可重做的內容了。"
+      },
+      "messages": {
+        "indentApplied": "已在每個自然段開頭插入所選符號（{count} 次）。",
+        "blankLinesApplied": "已在自然段之間插入 {count} 個空行。",
+        "cleanupApplied": "所選格式已清除。",
+        "spacingApplied": "已完成中英文間自動空格。",
+        "copyApplied": "目前文字已複製到剪貼簿。",
+        "resetApplied": "文章排版工具已重置。",
+        "noChanges": "這次操作沒有產生可見變化。"
+      }
     }
   }
 }

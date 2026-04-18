@@ -25,7 +25,9 @@
     "group": "第 {index} 组",
     "total": "总计",
     "none": "暂无",
-    "github": "GitHub"
+    "github": "GitHub",
+    "undo": "撤销",
+    "redo": "重做"
   },
   "settings": {
     "title": "设置",
@@ -101,6 +103,79 @@
       "copySingleSuccess": "当前结果已复制到剪贴板。",
       "generateSuccess": "已生成 {count} 条插入结果。",
       "resetSuccess": "随机插入工具已重置。"
+    },
+    "articleFormat": {
+      "tab": "文章排版",
+      "title": "文章排版工具箱",
+      "description": "在一个统一编辑区里完成段首缩进、段间空行、一键清除格式，以及中英文间自动空格。",
+      "editorTitle": "统一编辑区",
+      "editorDescription": "把文章粘贴到这里，所有操作都会直接作用在这个唯一输入框里。",
+      "editorPlaceholder": "把文章粘贴到这里，然后使用右侧工作台调整段首符号、段间空行、清除格式和中英文间距。",
+      "workbenchTitle": "排版工作台",
+      "workbenchDescription": "使用更直接的按钮和开关完成排版，不再堆满下拉框。",
+      "panels": {
+        "indent": "段首符号",
+        "blankLines": "段间空行",
+        "cleanup": "清除格式",
+        "spacing": "中英文空格"
+      },
+      "actions": {
+        "undo": "撤销",
+        "redo": "重做"
+      },
+      "stats": {
+        "characters": "字数",
+        "lines": "行数",
+        "paragraphs": "自然段"
+      },
+      "indent": {
+        "symbolTitle": "段首插入符号",
+        "countLabel": "每段插入数量",
+        "customLabel": "自定义符号",
+        "customPlaceholder": "例如：→ 或 ※",
+        "apply": "在段首插入",
+        "presets": {
+          "fullWidthSpace": "全宽空格",
+          "tab": "Tab",
+          "doubleSpace": "两个空格",
+          "custom": "自定义"
+        }
+      },
+      "blankLines": {
+        "countLabel": "插入空行数量",
+        "countHint": "会在每个自然段之间插入指定数量的空行。",
+        "treatEmptyLineAsParagraph": "将已有空行当作自然段处理",
+        "treatEmptyLineHint": "开启后，每一条物理行都会参与插入空行；关闭后，只把非空行当作自然段。",
+        "apply": "插入段间空行"
+      },
+      "cleanup": {
+        "removeLeadingIndent": "清除每段开头的缩进符号",
+        "removeBlankLines": "删除所有空行",
+        "trimLineEndSpaces": "清理每行末尾空白",
+        "removePanguSpacing": "移除中英文之间的空格",
+        "apply": "一键清除所选格式"
+      },
+      "spacing": {
+        "title": "为中文英文之间添加空格",
+        "description": "在不增加第二个输出框的前提下，直接把当前文本处理成 pangu 风格的中英文排版。",
+        "apply": "添加中英文空格"
+      },
+      "validation": {
+        "emptyIndentToken": "请先输入自定义段首符号。",
+        "noCleanupOption": "请至少勾选一项要清除的格式。",
+        "emptyText": "当前还没有可复制的文本。",
+        "cannotUndo": "当前会话里已经没有可撤销的内容了。",
+        "cannotRedo": "当前会话里已经没有可重做的内容了。"
+      },
+      "messages": {
+        "indentApplied": "已在每个自然段开头插入所选符号（{count} 次）。",
+        "blankLinesApplied": "已在自然段之间插入 {count} 个空行。",
+        "cleanupApplied": "所选格式已清除。",
+        "spacingApplied": "已完成中英文间自动空格。",
+        "copyApplied": "当前文本已复制到剪贴板。",
+        "resetApplied": "文章排版工具已重置。",
+        "noChanges": "这次操作没有产生可见变化。"
+      }
     }
   }
 }

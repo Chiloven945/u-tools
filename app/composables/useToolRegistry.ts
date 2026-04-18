@@ -25,6 +25,12 @@ export function useToolRegistry() {
             label: t('tools.randomInsert.tab'),
             description: t('tools.randomInsert.description'),
             icon: 'i-lucide-wand-sparkles'
+        },
+        {
+            id: 'article-format',
+            label: t('tools.articleFormat.tab'),
+            description: t('tools.articleFormat.description'),
+            icon: 'i-lucide-file-text'
         }
     ])
 

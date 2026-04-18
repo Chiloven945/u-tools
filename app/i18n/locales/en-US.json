@@ -25,7 +25,9 @@
     "group": "Group {index}",
     "total": "Total",
     "none": "None",
-    "github": "GitHub"
+    "github": "GitHub",
+    "undo": "Undo",
+    "redo": "Redo"
   },
   "settings": {
     "title": "Settings",
@@ -101,6 +103,79 @@
       "copySingleSuccess": "This output has been copied to your clipboard.",
       "generateSuccess": "{count} randomized outputs generated successfully.",
       "resetSuccess": "The random insert tool has been reset."
+    },
+    "articleFormat": {
+      "tab": "Article formatting",
+      "title": "Article formatting toolbox",
+      "description": "Format paragraphs in one editor: indent lines, insert blank lines, clear formatting, and add CJK/Latin spacing.",
+      "editorTitle": "Unified editor",
+      "editorDescription": "Paste or write the article here. All actions are applied directly to this single editor.",
+      "editorPlaceholder": "Paste your article here, then use the right-side workbench to adjust paragraph formatting, spacing, and cleanup.",
+      "workbenchTitle": "Formatting workbench",
+      "workbenchDescription": "Use modern, direct controls instead of stacks of dropdowns. Actions apply instantly to the editor.",
+      "panels": {
+        "indent": "Indent",
+        "blankLines": "Blank lines",
+        "cleanup": "Clear formatting",
+        "spacing": "CJK/Latin spacing"
+      },
+      "actions": {
+        "undo": "Undo",
+        "redo": "Redo"
+      },
+      "stats": {
+        "characters": "Chars",
+        "lines": "Lines",
+        "paragraphs": "Paragraphs"
+      },
+      "indent": {
+        "symbolTitle": "Indent symbol",
+        "countLabel": "How many symbols per paragraph",
+        "customLabel": "Custom indent symbol",
+        "customPlaceholder": "For example: → or ※",
+        "apply": "Insert at paragraph start",
+        "presets": {
+          "fullWidthSpace": "Full-width space",
+          "tab": "Tab",
+          "doubleSpace": "Two spaces",
+          "custom": "Custom"
+        }
+      },
+      "blankLines": {
+        "countLabel": "Blank lines to insert",
+        "countHint": "Inserts the specified number of empty lines between paragraphs.",
+        "treatEmptyLineAsParagraph": "Treat existing empty lines as paragraphs",
+        "treatEmptyLineHint": "When enabled, every physical line participates in the blank-line insertion; otherwise, only non-empty lines are treated as paragraphs.",
+        "apply": "Insert blank lines"
+      },
+      "cleanup": {
+        "removeLeadingIndent": "Remove leading indentation from each paragraph",
+        "removeBlankLines": "Remove all empty lines",
+        "trimLineEndSpaces": "Trim trailing spaces on each line",
+        "removePanguSpacing": "Remove spaces between CJK and Latin text",
+        "apply": "Clear selected formatting"
+      },
+      "spacing": {
+        "title": "Add spaces between Chinese and English",
+        "description": "Adds pangu-style spacing between CJK and Latin/number tokens without creating a second output box.",
+        "apply": "Apply spacing"
+      },
+      "validation": {
+        "emptyIndentToken": "Please enter a custom indent symbol first.",
+        "noCleanupOption": "Select at least one formatting item to clear.",
+        "emptyText": "There is no text to copy yet.",
+        "cannotUndo": "Nothing left to undo in this session.",
+        "cannotRedo": "Nothing left to redo in this session."
+      },
+      "messages": {
+        "indentApplied": "Inserted the selected symbol at the start of each paragraph ({count}x).",
+        "blankLinesApplied": "Inserted {count} empty line(s) between paragraphs.",
+        "cleanupApplied": "Selected formatting has been cleared.",
+        "spacingApplied": "CJK/Latin spacing has been applied.",
+        "copyApplied": "Current text copied to clipboard.",
+        "resetApplied": "The article formatting tool has been reset.",
+        "noChanges": "No visible changes were made."
+      }
     }
   }
 }

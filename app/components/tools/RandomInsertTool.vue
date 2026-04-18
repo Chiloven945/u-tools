@@ -8,7 +8,7 @@ const toast = useToast()
 
 const sourceText = ref('')
 const symbolsText = ref('')
-const countInput = ref('1')
+const countInput = ref<number | null>(1)
 const seedInput = ref('')
 const outputs = ref<string[]>([])
 
@@ -40,12 +40,19 @@ function showToast(options: { title: string, color?: 'success' | 'error' | 'warn
   })
 }
 
+function normalizePositiveInteger(value: number | null | undefined, fallback = 1) {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0 ? Math.floor(value) : fallback
+}
+
 function generateResults() {
+  const totalCount = normalizePositiveInteger(countInput.value)
+  countInput.value = totalCount
+
   try {
     const result = generateRandomInsertResults(
         sourceText.value,
         symbolsText.value,
-        Number.parseInt(countInput.value, 10),
+        totalCount,
         {seed: seedInput.value || undefined}
     )
 
@@ -68,7 +75,7 @@ function generateResults() {
 function resetAll() {
   sourceText.value = ''
   symbolsText.value = ''
-  countInput.value = '1'
+  countInput.value = 1
   seedInput.value = ''
   outputs.value = []
 
@@ -135,7 +142,7 @@ async function copySingleResult(text: string) {
 
         <div class="grid gap-4 lg:grid-cols-2">
           <UFormField :help="t('tools.randomInsert.countHint')" :label="t('tools.randomInsert.countLabel')" required>
-            <UInput v-model="countInput" class="w-full" min="1" step="1" type="number"/>
+            <UInputNumber v-model="countInput" :min="1" :step="1" class="w-full" />
           </UFormField>
 
           <UFormField :help="t('tools.randomInsert.seedHint')" :label="t('tools.randomInsert.seedLabel')">
@@ -167,17 +174,12 @@ async function copySingleResult(text: string) {
             :key="`${index}-${item}`"
             class="rounded-xl border border-default bg-elevated px-4 py-4"
         >
-          <div class="flex items-center justify-between gap-4">
-            <div class="text-sm font-medium text-highlighted">
-              {{ t('tools.randomInsert.outputItemTitle', {index: index + 1}) }}
+          <div class="flex items-center justify-between gap-3">
+            <div class="text-sm font-semibold text-highlighted">
+              {{ t('tools.randomInsert.resultItemTitle', {index: index + 1}) }}
             </div>
-            <UButton
-                color="neutral"
-                icon="i-lucide-copy"
-                size="sm"
-                variant="ghost"
-                @click="copySingleResult(item)"
-            >
+
+            <UButton color="neutral" icon="i-lucide-copy" size="sm" variant="ghost" @click="copySingleResult(item)">
               {{ t('common.copy') }}
             </UButton>
           </div>

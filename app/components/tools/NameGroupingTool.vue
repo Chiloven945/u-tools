@@ -8,7 +8,7 @@ const {copy, copied} = useClipboard()
 const toast = useToast()
 
 const namesInput = ref('')
-const groupCountInput = ref('2')
+const groupCountInput = ref<number | null>(2)
 const seedInput = ref('')
 const dedupe = ref(true)
 const result = ref<GroupingResult | null>(null)
@@ -39,8 +39,13 @@ function showToast(options: { title: string, color?: 'success' | 'error' | 'warn
   })
 }
 
+function normalizePositiveInteger(value: number | null | undefined, fallback = 1) {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0 ? Math.floor(value) : fallback
+}
+
 function generateGroups() {
-  const nextGroupCount = Number.parseInt(groupCountInput.value, 10)
+  const nextGroupCount = normalizePositiveInteger(groupCountInput.value)
+  groupCountInput.value = nextGroupCount
 
   try {
     result.value = createGroups(namesInput.value, nextGroupCount, {
@@ -65,7 +70,7 @@ function generateGroups() {
 
 function resetAll() {
   namesInput.value = ''
-  groupCountInput.value = '2'
+  groupCountInput.value = 2
   seedInput.value = ''
   dedupe.value = true
   result.value = null
@@ -124,7 +129,7 @@ async function copyResult() {
               :label="t('tools.nameGrouping.groupCountLabel')"
               required
           >
-            <UInput v-model="groupCountInput" class="w-full" min="1" step="1" type="number"/>
+            <UInputNumber v-model="groupCountInput" :min="1" :step="1" class="w-full" />
           </UFormField>
 
           <UFormField :help="t('tools.nameGrouping.seedHint')" :label="t('tools.nameGrouping.seedLabel')">

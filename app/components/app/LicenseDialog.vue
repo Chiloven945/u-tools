@@ -24,33 +24,34 @@ const {t} = useI18n()
       <div class="p-4 sm:p-6">
         <div class="mb-5 flex items-start justify-between gap-4">
           <div>
-            <div class="text-sm text-muted">AGPL-3.0</div>
+            <div class="text-sm text-muted">{{ t('license.summarySubtitle') }}</div>
             <h2 class="mt-1 text-xl font-semibold text-highlighted">{{ t('license.title') }}</h2>
             <p class="mt-2 text-sm text-toned">{{ t('license.description') }}</p>
           </div>
-          <UButton color="neutral" icon="i-lucide-x" variant="ghost" @click="emit('close')"/>
+          <UButton :aria-label="t('common.closeDialog')" color="neutral" icon="i-lucide-x" variant="ghost"
+                   @click="emit('close')"/>
         </div>
 
         <div class="space-y-4 rounded-xl border border-default bg-elevated p-4">
           <div>
-            <div class="text-sm font-medium text-highlighted">GNU Affero General Public License v3.0</div>
-            <p class="mt-1 text-sm text-toned">AGPL-3.0</p>
+            <div class="text-sm font-medium text-highlighted">{{ t('license.summaryTitle') }}</div>
+            <p class="mt-1 text-sm text-toned">{{ t('license.summarySubtitle') }}</p>
           </div>
 
           <p class="text-sm leading-6 text-toned">
-            {{ t('license.description') }}
+            {{ t('license.summaryDescription') }}
           </p>
 
           <div class="flex flex-wrap items-center gap-2 pt-1">
-            <UBadge color="neutral" variant="subtle">Open Source</UBadge>
-            <UBadge color="neutral" variant="subtle">Copyleft</UBadge>
-            <UBadge color="neutral" variant="subtle">Commercial Use</UBadge>
-            <UBadge color="neutral" variant="subtle">Source Disclosure</UBadge>
+            <UBadge color="neutral" variant="subtle">{{ t('license.badges.openSource') }}</UBadge>
+            <UBadge color="neutral" variant="subtle">{{ t('license.badges.keepLicense') }}</UBadge>
+            <UBadge color="neutral" variant="subtle">{{ t('license.badges.commercialUse') }}</UBadge>
+            <UBadge color="neutral" variant="subtle">{{ t('license.badges.sourceDisclosure') }}</UBadge>
           </div>
 
           <div class="pt-1">
             <UButton
-                :label="t('common.github')"
+                :label="t('license.viewSource')"
                 :to="props.githubUrl"
                 color="neutral"
                 icon="i-lucide-github"

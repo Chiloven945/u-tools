@@ -1,15 +1,25 @@
 {
   "brand": {
     "name": "u-tools",
-    "subtitle": "多工具項目網站"
+    "subtitle": "實用小工具"
   },
   "nav": {
     "tools": "工具",
     "settings": "設定"
   },
   "license": {
-    "title": "版權與許可",
-    "description": "u-tools 是開源軟體。本項目以 GNU Affero 通用公共許可協議第三版（AGPL-3.0）分發。"
+    "title": "開源授權",
+    "description": "本項目依據第三版 GNU Affero 通用公眾授權條款 v3.0（AGPL-3.0）發布。使用、修改或散布前，請先閱讀授權說明。",
+    "summaryTitle": "GNU Affero General Public License v3.0",
+    "summarySubtitle": "AGPL-3.0",
+    "summaryDescription": "你可以查看專案原始碼與完整授權內容，了解使用、修改與散布時需要遵守的規則。",
+    "badges": {
+      "openSource": "開源",
+      "keepLicense": "保留授權",
+      "commercialUse": "允許商用",
+      "sourceDisclosure": "公開原始碼"
+    },
+    "viewSource": "查看專案原始碼"
   },
   "common": {
     "close": "關閉",
@@ -27,37 +37,41 @@
     "none": "暫無",
     "github": "GitHub",
     "undo": "撤銷",
-    "redo": "重做"
+    "redo": "重做",
+    "toggleSidebar": "展開或收合側邊欄",
+    "openLicense": "查看授權說明",
+    "openGitHub": "開啟 GitHub",
+    "closeDialog": "關閉彈窗"
   },
   "settings": {
     "title": "設定",
-    "description": "調整應用偏好設定。",
+    "description": "調整常用選項。",
     "language": "語言",
-    "languageDescription": "在此處選擇應用的顯示語言。"
+    "languageDescription": "選擇你希望看到的介面語言。"
   },
   "tools": {
     "nameGrouping": {
       "tab": "隨機分組",
-      "title": "名字隨機分小組",
-      "description": "輸入名字並設定小組數量，生成隨機且盡量均衡的分組結果。",
+      "title": "隨機分組",
+      "description": "輸入名單並生成分組結果。",
       "inputTitle": "輸入名單",
       "inputDescription": "每行一個名字。空行會自動忽略。",
       "resultTitle": "分組結果",
-      "resultDescription": "點擊「分組」後，結果會顯示在這裡。",
+      "resultDescription": "點擊「生成」後，結果會顯示在這裡。",
       "namesLabel": "名字列表",
       "namesPlaceholder": "例如：\n張三\n李四\n王五\n趙六",
       "groupCountLabel": "小組數量",
-      "groupCountHint": "會按人數盡量均勻地分配到各組。",
+      "groupCountHint": "會盡量平均分配到各組。",
       "seedLabel": "隨機種子",
-      "seedHint": "不填寫時每次都會重新隨機；填寫後可復現同一結果。",
+      "seedHint": "想保留同一組結果時，可以填入相同的隨機種子。",
       "dedupeLabel": "自動去重",
-      "dedupeHint": "保留首次出現的名字，移除重複項。",
+      "dedupeHint": "重複名字只保留第一次出現的內容。",
       "summaryNames": "參與分組人數",
       "summaryGroups": "生成小組數",
       "summaryLargest": "最大組人數",
       "summarySmallest": "最小組人數",
       "emptyTitle": "還沒有分組結果",
-      "emptyDescription": "在左側輸入名單並點擊「分組」，右側就會顯示隨機結果。",
+      "emptyDescription": "輸入名單後點擊「生成」，這裡會顯示分組結果。",
       "validation": {
         "emptyNames": "請至少輸入一個名字。",
         "invalidGroupCount": "請輸入有效的小組數量。",
@@ -75,23 +89,23 @@
     },
     "randomInsert": {
       "tab": "隨機插入符號",
-      "title": "在每個非空白字元前隨機插入符號",
-      "description": "把符號盡量均衡地隨機插入到文字中每個非空白字元前，可一次生成多筆結果。",
+      "title": "隨機插入符號",
+      "description": "把符號隨機插入到文字中，可一次生成多筆結果。",
       "inputTitle": "輸入內容",
-      "inputDescription": "填寫待處理文字，並按每行一個填寫要插入的符號。",
+      "inputDescription": "填入原文，並按每行一個輸入要插入的符號。",
       "resultTitle": "生成結果",
-      "resultDescription": "點擊「生成」後，處理後的結果會顯示在這裡。",
-      "sourceLabel": "A：待處理文字",
+      "resultDescription": "點擊「生成」後，結果會顯示在這裡。",
+      "sourceLabel": "原文",
       "sourcePlaceholder": "例如：\n你好世界\n這是一段測試文字",
-      "symbolsLabel": "B：插入符號（每行一個）",
+      "symbolsLabel": "插入符號（每行一個）",
       "symbolsPlaceholder": "例如：\n★\n#",
       "countLabel": "生成數量",
-      "countHint": "可一次生成多筆隨機結果。",
+      "countHint": "可以一次生成多筆結果。",
       "seedLabel": "隨機種子",
-      "seedHint": "不填寫時每次都會重新隨機；填寫後可復現相同結果順序。",
+      "seedHint": "想保留同一批結果時，可以填入相同的隨機種子。",
       "outputItemTitle": "結果 {index}",
       "emptyTitle": "還沒有生成結果",
-      "emptyDescription": "在左側輸入文字和符號後，點擊「生成」即可查看結果。",
+      "emptyDescription": "輸入原文和符號後點擊「生成」，這裡會顯示結果。",
       "validation": {
         "emptySource": "請輸入 A：待處理文字。",
         "emptySymbols": "請輸入 B：插入符號（每行一個）。",
@@ -106,13 +120,13 @@
     },
     "articleFormat": {
       "tab": "文章排版",
-      "title": "文章排版工具箱",
-      "description": "在同一個編輯區內完成段首縮排、段間空行、一鍵清除格式，以及中英文之間自動空格。",
-      "editorTitle": "統一編輯區",
-      "editorDescription": "把文章貼到這裡，所有操作都會直接作用在這個唯一輸入框裡。",
-      "editorPlaceholder": "把文章貼到這裡，然後使用右側工作台調整段首符號、段間空行、清除格式和中英文間距。",
-      "workbenchTitle": "排版工作台",
-      "workbenchDescription": "使用更直接的按鈕與開關完成排版，不再堆滿下拉選單。",
+      "title": "文章排版",
+      "description": "整理段首、空行與中英文間距。",
+      "editorTitle": "正文",
+      "editorDescription": "把需要整理的文章貼到這裡。",
+      "editorPlaceholder": "把文章貼到這裡，然後使用右側面板進行排版。",
+      "workbenchTitle": "操作面板",
+      "workbenchDescription": "選擇一個操作後，會直接套用到目前文字。",
       "panels": {
         "indent": "段首符號",
         "blankLines": "段間空行",
@@ -129,7 +143,7 @@
         "paragraphs": "自然段"
       },
       "indent": {
-        "symbolTitle": "段首插入符號",
+        "symbolTitle": "段首符號",
         "countLabel": "每段插入數量",
         "customLabel": "自訂符號",
         "customPlaceholder": "例如：→ 或 ※",
@@ -143,9 +157,9 @@
       },
       "blankLines": {
         "countLabel": "插入空行數量",
-        "countHint": "會在每個自然段之間插入指定數量的空行。",
+        "countHint": "會在每個自然段之間加入指定數量的空行。",
         "treatEmptyLineAsParagraph": "將既有空行當作自然段處理",
-        "treatEmptyLineHint": "開啟後，每一條實體行都會參與插入空行；關閉後，只把非空行當作自然段。",
+        "treatEmptyLineHint": "開啟後，既有空行也會一起參與處理；關閉後，只處理有內容的段落。",
         "apply": "插入段間空行"
       },
       "cleanup": {
@@ -157,7 +171,7 @@
       },
       "spacing": {
         "title": "為中文英文之間加入空格",
-        "description": "在不新增第二個輸出框的前提下，直接把目前文字處理成 pangu 風格的中英文排版。",
+        "description": "自動為中文與英文、數字之間補上合適的空格。",
         "apply": "加入中英文空格"
       },
       "validation": {
@@ -171,7 +185,7 @@
         "indentApplied": "已在每個自然段開頭插入所選符號（{count} 次）。",
         "blankLinesApplied": "已在自然段之間插入 {count} 個空行。",
         "cleanupApplied": "所選格式已清除。",
-        "spacingApplied": "已完成中英文間自動空格。",
+        "spacingApplied": "已為中英文之間加入空格。",
         "copyApplied": "目前文字已複製到剪貼簿。",
         "resetApplied": "文章排版工具已重置。",
         "noChanges": "這次操作沒有產生可見變化。"

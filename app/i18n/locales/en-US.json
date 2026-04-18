@@ -1,15 +1,25 @@
 {
   "brand": {
     "name": "u-tools",
-    "subtitle": "Multi-tool project website"
+    "subtitle": "Useful tools"
   },
   "nav": {
     "tools": "Tools",
     "settings": "Settings"
   },
   "license": {
-    "title": "Copyright & License",
-    "description": "u-tools is open-source software distributed under the GNU Affero General Public License v3.0 (AGPL-3.0)."
+    "title": "Open-source license",
+    "description": "This project is released under the GNU Affero General Public License v3.0 (AGPL-3.0). Please review the license before using, modifying, or redistributing it.",
+    "summaryTitle": "GNU Affero General Public License v3.0",
+    "summarySubtitle": "AGPL-3.0",
+    "summaryDescription": "You can review the project source and the full license text to understand the rules for use, modification, and redistribution.",
+    "badges": {
+      "openSource": "Open source",
+      "keepLicense": "Keep license",
+      "commercialUse": "Commercial use",
+      "sourceDisclosure": "Share source"
+    },
+    "viewSource": "View source code"
   },
   "common": {
     "close": "Close",
@@ -27,37 +37,41 @@
     "none": "None",
     "github": "GitHub",
     "undo": "Undo",
-    "redo": "Redo"
+    "redo": "Redo",
+    "toggleSidebar": "Toggle sidebar",
+    "openLicense": "View license details",
+    "openGitHub": "Open GitHub",
+    "closeDialog": "Close dialog"
   },
   "settings": {
     "title": "Settings",
-    "description": "Adjust application preferences.",
+    "description": "Adjust common preferences.",
     "language": "Language",
-    "languageDescription": "Select the display language for the application here."
+    "languageDescription": "Choose the language you want to use in the app."
   },
   "tools": {
     "nameGrouping": {
       "tab": "Random grouping",
-      "title": "Randomly split names into groups",
-      "description": "Paste names, choose the number of groups, and generate balanced random groups.",
+      "title": "Random grouping",
+      "description": "Paste a list of names and generate groups.",
       "inputTitle": "Name input",
       "inputDescription": "Enter one name per line. Empty lines are ignored automatically.",
       "resultTitle": "Grouping result",
-      "resultDescription": "Click “Generate” and the grouped result will appear here.",
+      "resultDescription": "Click “Generate” to see the grouped result here.",
       "namesLabel": "Name list",
       "namesPlaceholder": "For example:\nAlice\nBob\nCindy\nDavid",
       "groupCountLabel": "Number of groups",
-      "groupCountHint": "Names are distributed as evenly as possible.",
+      "groupCountHint": "Names are split as evenly as possible.",
       "seedLabel": "Random seed",
-      "seedHint": "Leave empty to reshuffle every time, or fill in a seed to reproduce the same result.",
+      "seedHint": "Enter the same seed if you want to keep getting the same grouping.",
       "dedupeLabel": "Remove duplicates",
-      "dedupeHint": "Keep the first occurrence of a name and remove later duplicates.",
+      "dedupeHint": "If a name appears more than once, only the first one is kept.",
       "summaryNames": "People included",
       "summaryGroups": "Groups created",
       "summaryLargest": "Largest group",
       "summarySmallest": "Smallest group",
       "emptyTitle": "No grouping result yet",
-      "emptyDescription": "Enter names on the left and click “Generate” to see the randomized groups here.",
+      "emptyDescription": "Enter names and click “Generate” to see the grouping result here.",
       "validation": {
         "emptyNames": "Please enter at least one name.",
         "invalidGroupCount": "Please enter a valid group count.",
@@ -75,23 +89,23 @@
     },
     "randomInsert": {
       "tab": "Random symbol insert",
-      "title": "Insert symbols randomly before each non-space character",
-      "description": "Generate one or more randomized outputs by inserting symbols evenly before each non-whitespace character.",
+      "title": "Random symbol insert",
+      "description": "Insert symbols into your text at random and generate one or more results.",
       "inputTitle": "Input content",
-      "inputDescription": "Paste the source text and list the symbols to insert, one symbol per line.",
+      "inputDescription": "Paste the source text and list the symbols to insert, one per line.",
       "resultTitle": "Generated output",
-      "resultDescription": "After clicking “Generate”, the processed outputs will appear here.",
-      "sourceLabel": "A: Source text",
+      "resultDescription": "Click “Generate” to see the output here.",
+      "sourceLabel": "Source text",
       "sourcePlaceholder": "For example:\nHello world\nThis is a test",
-      "symbolsLabel": "B: Symbols to insert",
+      "symbolsLabel": "Symbols to insert (one per line)",
       "symbolsPlaceholder": "For example:\n★\n#",
       "countLabel": "Generate count",
-      "countHint": "Generates multiple randomized outputs at once.",
+      "countHint": "Generate several results at once if needed.",
       "seedLabel": "Random seed",
-      "seedHint": "Leave empty for a new random result each time, or enter a seed to reproduce the same output order.",
+      "seedHint": "Enter the same seed if you want to keep getting the same set of results.",
       "outputItemTitle": "Output {index}",
       "emptyTitle": "No output yet",
-      "emptyDescription": "Fill in the source text and symbols on the left, then click “Generate”.",
+      "emptyDescription": "Enter text and symbols, then click “Generate” to see the output here.",
       "validation": {
         "emptySource": "Please enter the source text.",
         "emptySymbols": "Please enter at least one insert symbol.",
@@ -106,13 +120,13 @@
     },
     "articleFormat": {
       "tab": "Article formatting",
-      "title": "Article formatting toolbox",
-      "description": "Format paragraphs in one editor: indent lines, insert blank lines, clear formatting, and add CJK/Latin spacing.",
-      "editorTitle": "Unified editor",
-      "editorDescription": "Paste or write the article here. All actions are applied directly to this single editor.",
-      "editorPlaceholder": "Paste your article here, then use the right-side workbench to adjust paragraph formatting, spacing, and cleanup.",
-      "workbenchTitle": "Formatting workbench",
-      "workbenchDescription": "Use modern, direct controls instead of stacks of dropdowns. Actions apply instantly to the editor.",
+      "title": "Article formatting",
+      "description": "Adjust paragraph starts, blank lines, and spacing between Chinese and English.",
+      "editorTitle": "Text",
+      "editorDescription": "Paste the article you want to tidy up here.",
+      "editorPlaceholder": "Paste your article here, then use the right panel to format it.",
+      "workbenchTitle": "Actions",
+      "workbenchDescription": "Choose an action and apply it directly to the current text.",
       "panels": {
         "indent": "Indent",
         "blankLines": "Blank lines",
@@ -129,8 +143,8 @@
         "paragraphs": "Paragraphs"
       },
       "indent": {
-        "symbolTitle": "Indent symbol",
-        "countLabel": "How many symbols per paragraph",
+        "symbolTitle": "Paragraph-start symbol",
+        "countLabel": "How many to insert per paragraph",
         "customLabel": "Custom indent symbol",
         "customPlaceholder": "For example: → or ※",
         "apply": "Insert at paragraph start",
@@ -143,9 +157,9 @@
       },
       "blankLines": {
         "countLabel": "Blank lines to insert",
-        "countHint": "Inserts the specified number of empty lines between paragraphs.",
+        "countHint": "Adds the selected number of empty lines between paragraphs.",
         "treatEmptyLineAsParagraph": "Treat existing empty lines as paragraphs",
-        "treatEmptyLineHint": "When enabled, every physical line participates in the blank-line insertion; otherwise, only non-empty lines are treated as paragraphs.",
+        "treatEmptyLineHint": "When enabled, existing empty lines are included in the process; otherwise, only paragraphs with content are changed.",
         "apply": "Insert blank lines"
       },
       "cleanup": {
@@ -157,7 +171,7 @@
       },
       "spacing": {
         "title": "Add spaces between Chinese and English",
-        "description": "Adds pangu-style spacing between CJK and Latin/number tokens without creating a second output box.",
+        "description": "Automatically add suitable spacing between Chinese and English or numbers.",
         "apply": "Apply spacing"
       },
       "validation": {
@@ -171,7 +185,7 @@
         "indentApplied": "Inserted the selected symbol at the start of each paragraph ({count}x).",
         "blankLinesApplied": "Inserted {count} empty line(s) between paragraphs.",
         "cleanupApplied": "Selected formatting has been cleared.",
-        "spacingApplied": "CJK/Latin spacing has been applied.",
+        "spacingApplied": "Spaces between Chinese and English have been added.",
         "copyApplied": "Current text copied to clipboard.",
         "resetApplied": "The article formatting tool has been reset.",
         "noChanges": "No visible changes were made."

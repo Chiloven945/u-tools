@@ -100,7 +100,7 @@ const sidebarNavigationUi = {
           class="flex h-(--ui-header-height) shrink-0 items-center justify-between gap-4 border-b border-default px-4">
         <div class="flex min-w-0 items-center gap-3">
           <UButton
-              aria-label="Toggle sidebar"
+              :aria-label="t('common.toggleSidebar')"
               color="neutral"
               icon="i-lucide-panel-left"
               variant="ghost"
@@ -115,7 +115,7 @@ const sidebarNavigationUi = {
 
         <div class="flex items-center gap-2">
           <UButton
-              aria-label="AGPL-3.0"
+              :aria-label="t('common.openLicense')"
               color="neutral"
               icon="i-lucide-scroll-text"
               square
@@ -124,8 +124,8 @@ const sidebarNavigationUi = {
           />
 
           <UButton
+              :aria-label="t('common.openGitHub')"
               :to="githubUrl"
-              aria-label="GitHub"
               color="neutral"
               icon="i-lucide-github"
               rel="noopener noreferrer"

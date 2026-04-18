@@ -44,7 +44,8 @@ const localeOptions = computed(() =>
             <h2 class="mt-1 text-xl font-semibold text-highlighted">{{ t('settings.title') }}</h2>
             <p class="mt-2 text-sm text-toned">{{ t('settings.description') }}</p>
           </div>
-          <UButton color="neutral" icon="i-lucide-x" variant="ghost" @click="emit('close')"/>
+          <UButton :aria-label="t('common.closeDialog')" color="neutral" icon="i-lucide-x" variant="ghost"
+                   @click="emit('close')"/>
         </div>
 
         <div class="space-y-4 rounded-xl border border-default bg-elevated p-4">

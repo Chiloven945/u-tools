@@ -190,6 +190,91 @@
         "resetApplied": "文章排版工具已重置。",
         "noChanges": "这次操作没有产生可见变化。"
       }
+    },
+    "pixivNovelFormat": {
+      "tab": "Pixiv 小说格式转换",
+      "title": "Pixiv 小说格式转换",
+      "description": "将 Markdown、部分 HTML 和常用排版整理为 Pixiv 小说可用格式。",
+      "editorTitle": "正文",
+      "editorDescription": "粘贴文本，或直接把 .md / .txt 文件拖到输入框中。",
+      "editorPlaceholder": "把 Markdown、HTML 或普通文本粘贴到这里，也可以直接拖入 .md / .txt 文件。",
+      "dropzoneActive": "松开鼠标即可载入文件内容",
+      "workbenchTitle": "转换与排版",
+      "workbenchDescription": "选择需要的操作后，会直接更新当前文本。",
+      "tabs": {
+        "pixiv": "Pixiv 转换",
+        "format": "文章排版",
+        "cleanup": "清除格式"
+      },
+      "pixiv": {
+        "supportedTitle": "支持的格式",
+        "supportedDescription": "查看支持的格式、示例和转换结果。",
+        "rulesTitle": "启用的转换规则",
+        "rules": {
+          "bold": "加粗",
+          "italic": "斜体",
+          "newPage": "分页",
+          "headings": "标题",
+          "links": "链接"
+        },
+        "optionsTitle": "转换选项",
+        "convertHtml": "同时转换 HTML",
+        "convertHtmlHint": "会处理常见的 HTML 标题、加粗、斜体、段落、换行、分隔线和链接。",
+        "stripUnsupportedMarkdown": "删除其他不支持的 Markdown 格式",
+        "stripUnsupportedMarkdownHint": "开启后，会尽量去掉列表、引用、代码标记等不支持的格式，只保留纯文本内容。",
+        "headingModeTitle": "标题转换范围",
+        "headingModes": {
+          "all": "转换所有级别标题",
+          "h1": "仅转换一级标题"
+        },
+        "apply": "转换为 Pixiv 小说格式",
+        "supportedCount": "项规则",
+        "supportedTip": "Markdown、部分 HTML 和 Pixiv 标签分开展示，查看起来更清楚。",
+        "supportedOpen": "查看支持的转换",
+        "supportedPixivSpec": "Pixiv 标签说明",
+        "supportedMarkdownSpec": "Markdown 语法说明",
+        "supportedModalTitle": "支持的转换",
+        "supportedModalDescription": "这里列出了当前支持的格式，以及转换后的结果。",
+        "supportedModalTip": "需要时可查看示例。若只想保留纯文本，可开启“删除其他不支持的 Markdown 格式”。",
+        "supportedResultLabel": "转换后",
+        "supportedBadges": {
+          "markdown": "Markdown",
+          "html": "HTML",
+          "pixiv": "Pixiv 标签"
+        },
+        "supportedCards": {
+          "bold": {
+            "title": "加粗"
+          },
+          "italic": {
+            "title": "斜体"
+          },
+          "newPage": {
+            "title": "分页"
+          },
+          "heading": {
+            "title": "标题",
+            "note": "可选择转换所有标题，或只转换一级标题。"
+          },
+          "link": {
+            "title": "链接"
+          },
+          "html": {
+            "title": "部分 HTML",
+            "result": "会按对应规则转换为 Pixiv 标签或普通文本",
+            "note": "支持常见的标题、段落、换行、链接、加粗、斜体和分隔线。"
+          }
+        }
+      },
+      "validation": {
+        "noPixivRule": "请至少启用一项 Pixiv 转换规则。",
+        "unsupportedFile": "仅支持拖入 .md 或 .txt 文件。"
+      },
+      "messages": {
+        "pixivApplied": "已按当前规则转换为 Pixiv 小说格式。",
+        "fileLoaded": "已载入文件：{name}",
+        "resetApplied": "Pixiv 小说格式转换工具已重置。"
+      }
     }
   }
 }

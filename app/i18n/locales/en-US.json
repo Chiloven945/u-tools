@@ -190,6 +190,91 @@
         "resetApplied": "The article formatting tool has been reset.",
         "noChanges": "No visible changes were made."
       }
+    },
+    "pixivNovelFormat": {
+      "tab": "Pixiv Novel Format",
+      "title": "Pixiv Novel Format",
+      "description": "Convert Markdown, partial HTML, and common text cleanup into Pixiv novel-ready formatting.",
+      "editorTitle": "Text",
+      "editorDescription": "Paste text here, or drag a .md or .txt file into the editor.",
+      "editorPlaceholder": "Paste Markdown, HTML, or plain text here. You can also drag in a .md or .txt file.",
+      "dropzoneActive": "Drop to load the file into the editor",
+      "workbenchTitle": "Convert & Format",
+      "workbenchDescription": "Each action updates the current text directly.",
+      "tabs": {
+        "pixiv": "Pixiv",
+        "format": "Formatting",
+        "cleanup": "Cleanup"
+      },
+      "pixiv": {
+        "supportedTitle": "Supported formats",
+        "supportedDescription": "View supported formats, examples, and conversion results.",
+        "rulesTitle": "Enabled rules",
+        "rules": {
+          "bold": "Bold",
+          "italic": "Italic",
+          "newPage": "New page",
+          "headings": "Headings",
+          "links": "Links"
+        },
+        "optionsTitle": "Options",
+        "convertHtml": "Also convert HTML",
+        "convertHtmlHint": "Handles common HTML headings, bold, italic, paragraphs, line breaks, horizontal rules, and links.",
+        "stripUnsupportedMarkdown": "Remove other unsupported Markdown formatting",
+        "stripUnsupportedMarkdownHint": "When turned on, unsupported formats such as lists, quotes, and code markers are reduced to plain text where possible.",
+        "headingModeTitle": "Heading conversion",
+        "headingModes": {
+          "all": "Convert all heading levels",
+          "h1": "Convert top-level headings only"
+        },
+        "apply": "Convert to Pixiv novel format",
+        "supportedCount": "rules",
+        "supportedTip": "Markdown, partial HTML, and Pixiv tags are shown separately so they are easier to scan.",
+        "supportedOpen": "View supported conversions",
+        "supportedPixivSpec": "Pixiv tag guide",
+        "supportedMarkdownSpec": "Markdown syntax guide",
+        "supportedModalTitle": "Supported conversions",
+        "supportedModalDescription": "These are the formats currently supported and what they become after conversion.",
+        "supportedModalTip": "Use the examples when needed. To keep plain text only, turn on “Remove other unsupported Markdown formatting”.",
+        "supportedResultLabel": "Converted to",
+        "supportedBadges": {
+          "markdown": "Markdown",
+          "html": "HTML",
+          "pixiv": "Pixiv tags"
+        },
+        "supportedCards": {
+          "bold": {
+            "title": "Bold"
+          },
+          "italic": {
+            "title": "Italic"
+          },
+          "newPage": {
+            "title": "New page"
+          },
+          "heading": {
+            "title": "Heading",
+            "note": "Choose whether to convert all heading levels or top-level headings only."
+          },
+          "link": {
+            "title": "Link"
+          },
+          "html": {
+            "title": "Partial HTML",
+            "result": "Converted using the matching Pixiv tag or plain text",
+            "note": "Supports common headings, paragraphs, line breaks, links, bold, italic, and horizontal rules."
+          }
+        }
+      },
+      "validation": {
+        "noPixivRule": "Turn on at least one Pixiv conversion rule.",
+        "unsupportedFile": "Only .md and .txt files are supported for drag and drop."
+      },
+      "messages": {
+        "pixivApplied": "Converted using the current Pixiv rules.",
+        "fileLoaded": "Loaded file: {name}",
+        "resetApplied": "Pixiv novel format tool has been reset."
+      }
     }
   }
 }

@@ -299,9 +299,15 @@ onBeforeUnmount(() => {
     >
       <template #actions>
         <div class="flex flex-wrap items-center gap-2">
-          <UBadge color="neutral" variant="soft">{{ t('tools.articleFormat.stats.characters') }} {{ stats.characters }}</UBadge>
+          <UBadge color="neutral" variant="soft">{{ t('tools.articleFormat.stats.characters') }} {{
+              stats.characters
+            }}
+          </UBadge>
           <UBadge color="neutral" variant="soft">{{ t('tools.articleFormat.stats.lines') }} {{ stats.lines }}</UBadge>
-          <UBadge color="neutral" variant="soft">{{ t('tools.articleFormat.stats.paragraphs') }} {{ stats.paragraphs }}</UBadge>
+          <UBadge color="neutral" variant="soft">{{ t('tools.articleFormat.stats.paragraphs') }} {{
+              stats.paragraphs
+            }}
+          </UBadge>
         </div>
       </template>
 

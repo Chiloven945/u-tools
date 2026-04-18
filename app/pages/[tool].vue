@@ -32,7 +32,10 @@ const activeTool = computed(
     <NameGroupingTool v-if="activeToolId === 'name-grouping'"/>
     <RandomInsertTool v-else-if="activeToolId === 'random-insert'"/>
     <ArticleFormatTool v-else-if="activeToolId === 'article-format'"/>
+    <PixivNovelFormatTool v-else-if="activeToolId === 'pixiv-novel-format'"/>
     <NameGroupingTool v-else-if="activeTool?.id === 'name-grouping'"/>
+    <RandomInsertTool v-else-if="activeTool?.id === 'random-insert'"/>
     <ArticleFormatTool v-else-if="activeTool?.id === 'article-format'"/>
+    <PixivNovelFormatTool v-else-if="activeTool?.id === 'pixiv-novel-format'"/>
   </div>
 </template>

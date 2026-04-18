@@ -190,6 +190,91 @@
         "resetApplied": "文章排版工具已重置。",
         "noChanges": "這次操作沒有產生可見變化。"
       }
+    },
+    "pixivNovelFormat": {
+      "tab": "Pixiv 小說格式轉換",
+      "title": "Pixiv 小說格式轉換",
+      "description": "將 Markdown、部分 HTML 與常用排版整理成 Pixiv 小說可用格式。",
+      "editorTitle": "正文",
+      "editorDescription": "貼上文字，或直接把 .md / .txt 檔拖到輸入框中。",
+      "editorPlaceholder": "把 Markdown、HTML 或一般文字貼到這裡，也可以直接拖入 .md / .txt 檔。",
+      "dropzoneActive": "放開滑鼠即可載入檔案內容",
+      "workbenchTitle": "轉換與排版",
+      "workbenchDescription": "選擇需要的操作後，會直接更新目前文字。",
+      "tabs": {
+        "pixiv": "Pixiv 轉換",
+        "format": "文章排版",
+        "cleanup": "清除格式"
+      },
+      "pixiv": {
+        "supportedTitle": "支援的格式",
+        "supportedDescription": "查看支援的格式、範例與轉換結果。",
+        "rulesTitle": "啟用的轉換規則",
+        "rules": {
+          "bold": "粗體",
+          "italic": "斜體",
+          "newPage": "分頁",
+          "headings": "標題",
+          "links": "連結"
+        },
+        "optionsTitle": "轉換選項",
+        "convertHtml": "同時轉換 HTML",
+        "convertHtmlHint": "會處理常見的 HTML 標題、粗體、斜體、段落、換行、分隔線與連結。",
+        "stripUnsupportedMarkdown": "刪除其他不支援的 Markdown 格式",
+        "stripUnsupportedMarkdownHint": "開啟後，會盡量移除清單、引用、程式碼標記等不支援的格式，只保留純文字內容。",
+        "headingModeTitle": "標題轉換範圍",
+        "headingModes": {
+          "all": "轉換所有層級標題",
+          "h1": "僅轉換一級標題"
+        },
+        "apply": "轉換為 Pixiv 小說格式",
+        "supportedCount": "項規則",
+        "supportedTip": "Markdown、部分 HTML 和 Pixiv 標籤分開顯示，查看起來更清楚。",
+        "supportedOpen": "查看支援的轉換",
+        "supportedPixivSpec": "Pixiv 標籤說明",
+        "supportedMarkdownSpec": "Markdown 語法說明",
+        "supportedModalTitle": "支援的轉換",
+        "supportedModalDescription": "這裡列出了目前支援的格式，以及轉換後的結果。",
+        "supportedModalTip": "需要時可查看範例。若只想保留純文字，可開啟「刪除其他不支援的 Markdown 格式」。",
+        "supportedResultLabel": "轉換後",
+        "supportedBadges": {
+          "markdown": "Markdown",
+          "html": "HTML",
+          "pixiv": "Pixiv 標籤"
+        },
+        "supportedCards": {
+          "bold": {
+            "title": "粗體"
+          },
+          "italic": {
+            "title": "斜體"
+          },
+          "newPage": {
+            "title": "分頁"
+          },
+          "heading": {
+            "title": "標題",
+            "note": "可選擇轉換所有標題，或只轉換一級標題。"
+          },
+          "link": {
+            "title": "連結"
+          },
+          "html": {
+            "title": "部分 HTML",
+            "result": "會依對應規則轉換為 Pixiv 標籤或一般文字",
+            "note": "支援常見的標題、段落、換行、連結、粗體、斜體與分隔線。"
+          }
+        }
+      },
+      "validation": {
+        "noPixivRule": "請至少啟用一項 Pixiv 轉換規則。",
+        "unsupportedFile": "僅支援拖入 .md 或 .txt 檔案。"
+      },
+      "messages": {
+        "pixivApplied": "已依目前規則轉換為 Pixiv 小說格式。",
+        "fileLoaded": "已載入檔案：{name}",
+        "resetApplied": "Pixiv 小說格式轉換工具已重設。"
+      }
     }
   }
 }

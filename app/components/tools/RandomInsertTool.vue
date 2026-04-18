@@ -142,7 +142,7 @@ async function copySingleResult(text: string) {
 
         <div class="grid gap-4 lg:grid-cols-2">
           <UFormField :help="t('tools.randomInsert.countHint')" :label="t('tools.randomInsert.countLabel')" required>
-            <UInputNumber v-model="countInput" :min="1" :step="1" class="w-full" />
+            <UInputNumber v-model="countInput" :min="1" :step="1" class="w-full"/>
           </UFormField>
 
           <UFormField :help="t('tools.randomInsert.seedHint')" :label="t('tools.randomInsert.seedLabel')">

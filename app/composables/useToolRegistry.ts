@@ -31,6 +31,12 @@ export function useToolRegistry() {
             label: t('tools.articleFormat.tab'),
             description: t('tools.articleFormat.description'),
             icon: 'i-lucide-file-text'
+        },
+        {
+            id: 'pixiv-novel-format',
+            label: t('tools.pixivNovelFormat.tab'),
+            description: t('tools.pixivNovelFormat.description'),
+            icon: 'i-lucide-book-text'
         }
     ])
 

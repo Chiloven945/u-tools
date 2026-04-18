@@ -129,7 +129,7 @@ async function copyResult() {
               :label="t('tools.nameGrouping.groupCountLabel')"
               required
           >
-            <UInputNumber v-model="groupCountInput" :min="1" :step="1" class="w-full" />
+            <UInputNumber v-model="groupCountInput" :min="1" :step="1" class="w-full"/>
           </UFormField>
 
           <UFormField :help="t('tools.nameGrouping.seedHint')" :label="t('tools.nameGrouping.seedLabel')">

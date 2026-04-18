@@ -22,6 +22,10 @@ export default defineNuxtConfig({
             alwaysRedirect: false,
             fallbackLocale: 'zh-CN'
         },
+        compilation: {
+            strictMessage: false,
+            escapeHtml: false,
+        },
         vueI18n: './app/i18n/i18n.config.ts'
     },
     components: [

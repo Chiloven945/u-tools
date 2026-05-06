@@ -19,7 +19,7 @@
     "zod": "^4.4.1"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.102",
+    "@iconify-json/lucide": "^1.2.105",
     "@nuxtjs/i18n": "^10.3.0",
     "@types/papaparse": "^5.5.2",
     "typescript": "^6.0.3"
